@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaoke Spin Wheel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1 class="app-title">
+            <span class="title-icon">&#127908;</span>
+            Karaoke Spin Wheel
+        </h1>
+        <div class="theme-picker" id="themePicker">
+            <span class="theme-picker-label">Theme</span>
+            <!-- Theme buttons injected by JS -->
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- Wheel & Controls -->
+        <section class="wheel-section">
+            <div class="wheel-wrapper">
+                <div class="pointer" aria-hidden="true"></div>
+                <canvas id="wheelCanvas" width="500" height="500">
+                    Your browser does not support the canvas element.
+                </canvas>
+                <div class="center-dot" aria-hidden="true"></div>
+            </div>
+
+            <!-- Power bar (visible while holding spin button) -->
+            <div id="powerBar" class="power-bar">
+                <div id="powerFill" class="power-fill"></div>
+                <span class="power-label"></span>
+            </div>
+
+            <button id="spinBtn" class="spin-btn" type="button">
+                Hold &amp; Release to Spin
+            </button>
+
+            <div class="result-container">
+                <div id="result" class="result-display" role="status" aria-live="polite"></div>
+                <button id="removeChosenBtn" class="remove-chosen-btn" type="button">
+                    Remove from wheel
+                </button>
+            </div>
+        </section>
+
+        <!-- Song Management Panel -->
+        <aside class="song-panel">
+            <h2>Song List</h2>
+
+            <div class="add-song-form">
+                <div class="add-song-inputs">
+                    <input
+                        type="text"
+                        id="songInput"
+                        placeholder="Song title..."
+                        autocomplete="off"
+                    >
+                    <input
+                        type="url"
+                        id="urlInput"
+                        placeholder="YouTube link (optional)"
+                        autocomplete="off"
+                    >
+                </div>
+                <button id="addBtn" type="button">Add</button>
+            </div>
+
+            <div class="search-bar">
+                <span class="search-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search songs..."
+                    autocomplete="off"
+                >
+                <button id="clearSearchBtn" class="clear-search" type="button" aria-label="Clear search">&times;</button>
+            </div>
+
+            <div id="songCount" class="song-count"></div>
+            <div id="songList" class="song-list" role="list"></div>
+
+            <!-- Export / Import -->
+            <div class="io-controls">
+                <button id="exportBtn" class="io-btn export-btn" type="button">
+                    Export JSON
+                </button>
+                <button id="importBtn" class="io-btn import-btn" type="button">
+                    Import JSON
+                </button>
+                <input
+                    type="file"
+                    id="importFileInput"
+                    accept=".json"
+                    hidden
+                >
+            </div>
+        </aside>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

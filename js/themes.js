@@ -151,7 +151,7 @@ export const THEMES = [
             '--danger-bg':        'rgba(220, 38, 38, 0.15)',
             '--wheel-hub':        '#1a1008',
             '--wheel-hub-border': 'rgba(255, 140, 0, 0.20)',
-            '--wheel-label':      '#0d0d0d',
+            '--wheel-label':      '#ffffff',
             '--pointer-color':    '#a855f7',
             '--panel-bg':         'rgba(255, 140, 0, 0.04)',
             '--btn-spin-bg':      '#f97316',

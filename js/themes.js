@@ -343,6 +343,60 @@ export const THEMES = [
             '#f472b6', '#bef264', '#22d3ee', '#fde047',
         ],
     },
+
+    /* ------------------------------------------------------------------ */
+    /*  BACHELORETTE                                                       */
+    /* ------------------------------------------------------------------ */
+    {
+        id: 'bachelorette',
+        label: 'Bachelorette',
+        icon: '💕',
+        vars: {
+            '--bg-primary':       '#1a0a14',
+            '--bg-surface':       'rgba(244, 114, 182, 0.08)',
+            '--bg-surface-hover': 'rgba(244, 114, 182, 0.12)',
+            '--bg-input':         'rgba(244, 114, 182, 0.08)',
+            '--border-subtle':    'rgba(244, 114, 182, 0.15)',
+            '--border-focus':     '#f472b6',
+            '--text-primary':     '#fce7f3',
+            '--text-secondary':   'rgba(252, 231, 243, 0.65)',
+            '--text-muted':       'rgba(252, 231, 243, 0.40)',
+            '--accent':           '#f472b6',
+            '--accent-text':      '#ffffff',
+            '--danger':           '#fb7185',
+            '--danger-bg':        'rgba(251, 113, 133, 0.12)',
+            '--wheel-hub':        '#2d1420',
+            '--wheel-hub-border': 'rgba(244, 114, 182, 0.25)',
+            '--wheel-label':      '#1a0a14',
+            '--pointer-color':    '#fbbf24',
+            '--panel-bg':         'rgba(244, 114, 182, 0.05)',
+            '--btn-spin-bg':      '#f472b6',
+            '--btn-spin-text':    '#ffffff',
+            '--btn-add-bg':       '#fbbf24',
+            '--btn-add-text':     '#1a0a14',
+            '--yt-accent':        '#fb7185',
+            '--yt-bg':            'rgba(251, 113, 133, 0.12)',
+            '--scrollbar-thumb':  'rgba(244, 114, 182, 0.20)',
+            '--highlight-bg':     'rgba(244, 114, 182, 0.12)',
+            '--mark-bg':          '#f472b6',
+            '--mark-text':        '#ffffff',
+            '--power-low':        '#fbbf24',
+            '--power-mid':        '#f472b6',
+            '--power-high':       '#fb7185',
+        },
+        wheelColors: [
+            '#f472b6', '#fbbf24', '#ec4899', '#fde047',
+            '#db2777', '#f59e0b', '#f9a8d4', '#fef08a',
+            '#be185d', '#d97706', '#fbcfe8', '#fef3c7',
+            '#9d174d', '#b45309', '#f0abfc', '#fde68a',
+            '#831843', '#92400e', '#e879f9', '#fcd34d',
+            '#701a3f', '#78350f', '#d946ef', '#facc15',
+        ],
+        confettiColors: [
+            '#f472b6', '#fbbf24', '#ec4899', '#fde047',
+            '#f9a8d4', '#fef08a', '#fbcfe8', '#e879f9',
+        ],
+    },
 ];
 
 /** Default theme ID. */
